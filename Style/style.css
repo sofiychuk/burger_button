@@ -1,0 +1,944 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html {
+    font: 400 14px/normal 'Raleway', sans-serif;
+
+}
+
+body {
+    background-color: lightblue;
+}
+
+.main {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.fresh_life {
+    height: 1000px;
+    background: url(../Img/background_1.png);
+    position: relative;
+}
+
+.fresh_life__icon {
+    float: left;
+    margin-left: 170px;
+    padding-top: 55px;
+}
+
+.navigation {
+    float: right;
+    padding-top: 70px;
+}
+
+.nav {
+    list-style: none;
+    margin-right: 160px;
+}
+
+.nav__link {
+    font-size: 1.14rem;
+    font-weight: bold;
+    text-align: right;
+    display: inline;
+    text-decoration: none;
+    margin-left: 40px;
+    border-top: #ff6033 solid transparent;
+    padding-top: 5px;
+    text-transform: uppercase;
+}
+
+.nav__link:hover {
+    border-top: #ff6033 solid;
+    transition: all .3s;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+    outline: none;
+}
+
+.menu-block {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    display: none;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+    content: '';
+    display: block;
+    transition: .5s;
+}
+
+.menu-block span::before {
+    transform: translateY(-5px);
+}
+
+.menu-btn span::after {
+    transform: translateY(5px);
+}
+
+.menu-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(185, 197, 10, 0.61);
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+}
+.menu-btn:active {
+    transform: scale(.9);
+}
+.menu-btn-active span::before {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.menu-btn-active span {
+    height: 0;
+}
+
+.menu-btn-active span::after {
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.menu a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6033;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgba(185, 197, 10, 0.61);
+    transition: .3s;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    opacity: 0;
+    z-index: 1;
+}
+
+.menu a i{
+    color: #fff;
+}
+.menu-active a {
+    opacity: 1;
+}
+
+.menu-active a:nth-child(1) {
+    transform: translate(-80%, -130%);
+}
+
+.menu-active a:nth-child(2) {
+    transform: translate(-150%, -0%);
+}
+
+.menu-active a:nth-child(3) {
+    transform: translate(-80%, 130%);
+}
+
+.menu-active a:nth-child(4) {
+    transform: translate(80%, 130%);
+}
+
+.menu-active a:nth-child(5) {
+    transform: translate(150%, 0%);
+}
+
+.menu-active a:nth-child(6) {
+    transform: translate(80%, -130%);
+}
+
+.menu a:nth-child(2) {
+    transition-delay: .1s;
+}
+
+.menu a:nth-child(3) {
+    transition-delay: .2s;
+}
+
+.menu a:nth-child(4) {
+    transition-delay: .3s;
+}
+
+.menu a:nth-child(5) {
+    transition-delay: .4s;
+}
+
+.menu a:nth-child(6) {
+    transition-delay: .5s;
+}
+
+.fresh_life__content {
+    clear: both;
+    width: 375px;
+    margin-left: 170px;
+    padding-top: 260px;
+}
+
+.fresh_life__title {
+    font-size: 4.29rem;
+    color: rgb(38, 38, 38);
+    text-align: left;
+}
+
+.fresh_life__text {
+    font-size: 1.21rem;
+    color: rgb(38, 38, 38);
+    line-height: 1.72;
+    padding-top: 15px;
+}
+
+.fresh_life__btn {
+    background-color: #ff6033;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border: none;
+    box-shadow: 0px 0px 7px 0px #000000;
+    margin-top: 55px;
+    outline: none;
+    font-size: 1.43rem;
+}
+
+.fresh_life__btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to left, #fff, #fff);
+    color: #ff6033;
+    box-shadow: 1px 1px 10px 1px grey;
+    transition: all .7s ease-in-out;
+}
+
+.scroll {
+    position: absolute;
+    bottom: 75px;
+    left: calc(50% - 12px);
+}
+
+.about_us {
+    background-color: #00b2b2;
+    height: 700px;
+}
+
+.about_us__img {
+    float: left;
+    width: 50%;
+    padding: 45px 50px 0px 100px;
+}
+
+.about_us__content {
+    float: right;
+    width: 50%;
+    color: #fff;
+    padding-top: 170px;
+    padding-left: 80px;
+}
+
+.about_us__title {
+    font-size: 6.43rem;
+    font-weight: bold;
+}
+
+.about_us__text {
+    font-size: 1.21rem;
+    line-height: 1.588;
+    text-align: left;
+    width: 550px;
+    margin-top: 20px;
+}
+
+.services {
+    height: 792px;
+    background-color: #70bfff;
+}
+
+.services__menu {
+    float: left;
+    padding: 165px 0 0 225px;
+}
+
+.services__list {
+    background: url(../Img/menu_list_srvc.png) no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 105px;
+    margin-bottom: 15px;
+}
+
+.services__list-text {
+    float: left;
+    font-size: 1.43rem;
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    padding-top: 40px;
+}
+
+.services__list img {
+    float: right;
+    padding: 25px 30px 0 0;
+}
+
+.services__list:nth-of-type(3) .services__list-text {
+    padding-top: 30px;
+}
+
+.services__list:first-child img {
+    padding: 30px 35px 0 0;
+}
+
+.services__title {
+    background: url(../Img/tomato_section_3.png) no-repeat 50% 50%;
+    background-size: contain;
+    width: 640px;
+    height: 530px;
+    float: right;
+    color: #fff;
+    font-size: 2.86rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 100px 60px 0 0;
+    padding: 220px 0 0 30px;
+}
+
+.hidden_title {
+    color: #fff;
+    font-size: 2.86rem;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 40px;
+    display: none;
+}
+
+.services__title h1 {
+    width: 600px;
+}
+
+.gallery {
+    height: 1540px;
+    background-color: #ffe92f;
+}
+
+.gallery__header-title {
+    font-size: 6.43rem;
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.gallery__header-text {
+    font-size: 1.21rem;
+    color: rgb(38, 38, 38);
+    line-height: 1.588;
+    width: 585px;
+    text-align: center;
+    margin: 20px 0 50px 450px;
+}
+
+.gallery__main {
+    width: 1175px;
+    margin: 0 auto;
+}
+
+.gallery__btn {
+    text-align: center;
+}
+
+.gallery__btn--blue {
+    background-color: #5585a2;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-size: 1.43rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 7px 0px #000000;
+    margin-top: 35px;
+}
+
+.subscribe_to_us {
+    background: url(../Img/bg_sect_5.png);
+    background-size: 100%;
+    height: 500px;
+    padding-left: 165px;
+}
+
+.subscribe_to_us__title {
+    font-size: 2.86rem;
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+    padding-top: 130px;
+}
+
+.subcribe_to_us__text {
+    font-size: 1.21rem;
+    color: rgb(38, 38, 38);
+    line-height: 1.588;
+    text-align: left;
+    width: 555px;
+    padding: 25px 0 0 0;
+}
+
+.subscribe__email {
+    padding: 10px;
+    width: 570px;
+    margin-right: 30px;
+}
+
+input[type="text"]:active {
+    outline: 0 none;
+}
+
+.subscribe__btn {
+    background-color: #96b92c;
+    color: #fff;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    font-size: 1.43rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 7px 0px #000000;
+    margin-top: 35px;
+}
+
+.blog {
+    height: 860px;
+    background-color: #b07cf7;
+}
+
+.blog__header__title {
+    padding: 90px 0 30px;
+    font-size: 6.43rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.blog__header__text {
+    font-size: 1.21rem;
+    color: rgb(255, 255, 255);
+    line-height: 1.471;
+    text-align: center;
+    width: 580px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+.blog__main {
+    text-align: center;
+}
+
+.box--drink {
+    background: url(../Img/apple_drink_blog.png);
+    width: 375px;
+    height: 327px;
+    display: inline-block;
+    background-size: cover;
+    text-align: left;
+    padding: 5px;
+    padding-top: 2px;
+}
+
+.box--soup {
+    background: url(../Img/peas_blog.png);
+    width: 375px;
+    height: 315px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 30px;
+
+}
+
+.box--raspberry {
+    background: url(../Img/raspberry_blog.png);
+    width: 375px;
+    height: 315px;
+    display: inline-block;
+    text-align: left;
+}
+
+.box--small {
+    background: url(../Img/small_box.png);
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+}
+
+.box--small-date {
+    font-size: 2.29rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 0.9;
+    text-align: center;
+}
+
+.box__title {
+    font-size: 1.43rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: left;
+    padding: 115px 23px 10px;
+}
+
+.box__author {
+    color: #fff;
+    padding: 5px 0 0 23px;
+}
+
+.blog__btn {
+    text-align: center;
+}
+
+.blog__btn--red {
+    background-color: #f72b3b;
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    outline: none;
+    font-size: 1.43rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px 0px gray;
+    margin-top: 35px;
+}
+
+.contact {
+    background: url(../Img/bg_contact.png);
+    height: 864px;
+}
+
+.contact__header__title {
+    font-size: 6.43rem;
+    font-family: "Raleway";
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+    text-align: center;
+    padding: 80px 0 30px;
+}
+
+.contact__header__text {
+    font-size: 1.21rem;
+    color: rgb(38, 38, 38);
+    line-height: 1.471;
+    width: 360px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact__form {
+    float: left;
+    width: 500px;
+    height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 160px;
+}
+
+.contact__input {
+    padding: 15px;
+    color: #fff;
+    background-color: #00c4c4;
+    outline: none;
+    border: none;
+    border-left: 2px #355b82 solid transparent;
+    font-size: 1.07rem;
+    opacity: 0.4;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+.contact__info {
+    float: right;
+    width: 50%;
+}
+
+.contact__textarea {
+    padding: 15px;
+    color: #fff;
+    background-color: #00c4c4;
+    outline: none;
+    border: none;
+    border-left: 2px #355b82 solid transparent;
+    font-size: 1.07rem;
+    opacity: 0.4;
+    height: 250px;
+}
+
+.contact__info {
+    padding-left: 90px;
+    font-size: 1.21rem;
+}
+
+.contact__info span {
+    font-weight: 700;
+}
+
+.footer {
+    height: 92px;
+    background-color: #262626;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.14rem;
+    color: rgb(185, 185, 185);
+    padding-top: 40px;
+}
+
+.footer-word--red {
+    color: #ff2b58;
+}
+
+@media screen and (max-width: 1499px) {
+    html {
+        font: 400 13px/normal 'Raleway', sans-serif;
+    }
+
+    .main {
+        width: 1366px;
+        margin: 0 auto;
+    }
+
+    .gallery__header-text {
+        width: 585px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .subscribe__email {
+        width: 500px;
+    }
+
+    .footer {
+        width: 1366px;
+    }
+}
+
+@media screen and (max-width: 1285px) {
+    html {
+        font: 400 11px/normal 'Raleway', sans-serif;
+    }
+
+    .main {
+        width: 1152px;
+        margin: 0 auto;
+    }
+
+    .fresh_life__icon {
+        margin-left: 130px;
+    }
+
+    .fresh_life__content {
+        margin-left: 140px;
+    }
+
+    .scroll {
+        position: absolute;
+        left: calc(50% - 12px);
+    }
+
+    .about_us__content {
+        padding-left: 180px;
+    }
+
+    .about_us__img {
+        padding: 45px 30px 0px 50px;
+    }
+
+    .about_us__text {
+        width: 350px;
+    }
+
+    .services__menu {
+        padding: 165px 0 0 150px;
+    }
+
+    .services__title {
+        background-size: contain;
+        width: 540px;
+        height: 430px;
+        margin: 140px 0 0 0;
+        padding: 220px 0 0 30px;
+    }
+
+    .gallery {
+        height: 1100px;
+    }
+
+    .gallery__header-text {
+        width: 585px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .gallery__main {
+        width: 1040px;
+        margin: 0 auto;
+        margin-right: 15px;
+    }
+
+    .ba-width-50 {
+        display: none;
+    }
+
+    .ba-width-65 {
+        width: 100%;
+        text-align: center;
+        margin-left: -40px;
+    }
+
+    .ba-width-32 {
+        display: none;
+    }
+
+    .subscribe_to_us {
+        height: 400px;
+        padding-left: 115px;
+    }
+
+    .subscribe_to_us__title {
+        padding-top: 50px;
+    }
+
+    .subscribe__email {
+        width: 455px;
+    }
+
+    .subcribe_to_us__text {
+        width: 455px;
+    }
+
+    .box--soup {
+        margin: 0 15px;
+    }
+
+    .box {
+        width: 345px;
+        height: 285px;
+    }
+
+    .contact__form {
+        width: 450px;
+        height: 445px;
+        margin-left: 120px;
+    }
+
+    .footer {
+        width: 1152px;
+    }
+
+}
+
+@media screen and (max-width: 1115px) {
+    html {
+        font: 400 9px/normal 'Raleway', sans-serif;
+    }
+
+    .main {
+        width: 720px;
+        margin: 0 auto;
+    }
+    .menu-block{
+        display: block;
+    }
+    .fresh_life {
+        background: #fff url(../Img/background_1.png);
+        background-size: 100%;
+        height: 500px;
+    }
+
+    .fresh_life__icon {
+        margin-left: 30px;
+    }
+
+    .fresh_life__content {
+        margin-left: 30px;
+        padding-top: 60px;
+    }
+
+    .fresh_life__text {
+        width: 200px;
+    }
+    .navigation{
+        display: none;
+    }
+    .nav {
+        margin-right: 60px;
+    }
+
+    .nav__link {
+        margin-left: 20px;
+    }
+
+    .about_us__content {
+        padding-left: 0px;
+        padding-top: 60px;
+    }
+
+    .about_us {
+        height: 450px;
+    }
+
+    .about_us__img {
+        padding: 45px 30px 0px 0px;
+
+    }
+
+    .about_us__img img {
+        width: 350px;
+        height: 344px;
+    }
+
+    .about_us__text {
+        width: 300px;
+    }
+
+    .services__menu {
+        padding: 165px 0 0 150px;
+    }
+
+    .services__title {
+        display: none;
+    }
+
+    .hidden_title {
+        display: block;
+    }
+
+    .services__menu {
+        padding: 65px 0 0 185px;
+    }
+
+    .services__menu {
+        background: url(../Img/tomato_section_3.png) no-repeat;
+        background-position: 50% 80%;
+        width: 100%
+    }
+
+    .gallery {
+        height: 800px;
+    }
+
+    .gallery__header-text {
+        width: 585px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .gallery__main {
+        width: 720px;
+        margin: 0 auto;
+        margin-right: 15px;
+    }
+
+    .ba-width-50 {
+        display: none;
+    }
+
+    .ba-width-65 {
+        width: 100%;
+        text-align: center;
+        margin-left: -4px;
+    }
+
+    .peach {
+        width: 550px;
+    }
+
+    .ba-width-32 {
+        display: none;
+    }
+
+    .subscribe_to_us {
+        height: 280px;
+        padding-left: 55px;
+    }
+
+    .subscribe__email {
+        width: 300px;
+    }
+
+    .subcribe_to_us__text {
+        width: 255px;
+    }
+
+    .blog {
+        height: 1420px;
+    }
+
+    .box--soup {
+        margin: 15px;
+    }
+
+    .box {
+        width: 375px;
+        height: 315px;
+    }
+
+    .box--small-date {
+        font-size: 32px;
+    }
+
+    .box__title {
+        font-size: 20px;
+    }
+
+    .contact {
+        height: 700px;
+    }
+
+    .contact__form {
+        width: 280px;
+        height: 315px;
+        margin-left: 50px;
+    }
+
+    .contact__textarea {
+        height: 150px;
+    }
+
+    .footer {
+        width: 720px;
+    }
+
+}

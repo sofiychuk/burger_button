@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.ba-grid > [class*="ba-width-"] {
+    float: left;
+}
+
+.ba-grid {
+    overflow: hidden;
+    margin-left: -20px;
+}
+
+.ba-grid + .ba-grid {
+	margin-top: 20px;
+}
+
+[class*="ba-width-"] {
+	padding-left: 30px;
+    line-height: 0;
+}
+.ba-width-modify{
+margin: -3px 6px 0 -6px;
+}
+.ba-width-65{
+    width: 66%;
+}
+.ba-width-32{
+    width: 34%;
+}
+.ba-width-50{
+    width: 50%;
+}
